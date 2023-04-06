@@ -7,10 +7,10 @@ int main(){
     srand((unsigned int)time(NULL));
     int a[6];
     int b[6];
-    fill_n(b,6,0); //입력받을 배열 0으로 초기화
+    fill_n(b,6,NULL); //입력받을 배열 NULL로 초기화
     int num = 0;
     int cnt = 0;
-    while (cnt < 6) {
+    while (cnt < 6) { //6번이 채워질 동안
         bool exist = false;
         num = rand() % 25 + 1;
         for (int i = 0; i < cnt; i++) {
