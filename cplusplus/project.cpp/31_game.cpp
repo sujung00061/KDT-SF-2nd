@@ -9,15 +9,13 @@ int main(){
 
 
     while (cnt <32){ 
-        bool is_end = false;
-
             cout << "개수를 입력하세요 : ";
             cin >> x;
-            cout << "사용자가 부른 숫자!" << endl;
             if (x >= 4 || x <= 0){
                 cout << "1~3의 수를 입력하세요." << endl;
             }
-            else if(x < 4 && x > 0){
+            if(x < 4 && x > 0){
+                cout << "사용자가 부른 숫자!" << endl;
                 for (int i = 0; i < x; i++){
                     cout << cnt << endl;
                         if (cnt == 31){
@@ -26,9 +24,6 @@ int main(){
                         }
                     cnt++;
                 }
-            is_end = true; 
-            }
-        if (is_end == true){
                 int random = rand() % 3 + 1;
                 cout <<"컴퓨터가 부른 숫자!" << endl;
                 for (int i = 0; i < random; i++){
