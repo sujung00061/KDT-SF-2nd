@@ -69,12 +69,12 @@ int main(){
     double x,y,answer;
     char a;
     string b;
-    cout<<"숫자를 입력해주세요 : "<<endl;
+    cout<<"숫자를 입력해주세요 : ";
     cin>>x;
     while(1){
-        cout<<"연산자를 입력해주세요 : "<<endl;
+        cout<<"연산자를 입력해주세요 : ";
         cin>>a;
-        cout<<"숫자를 입력해주세요 : "<<endl;
+        cout<<"숫자를 입력해주세요 : ";
         cin>>y;
         cout<<"----------------------------------------------------"<<endl;
         cout<<"결과: ";
@@ -113,7 +113,7 @@ int main(){
                     break;
                 }
                 if(b=="AC"){
-                    cout<<"숫자를 입력해주세요 : "<<endl;
+                    cout<<"숫자를 입력해주세요 : ";
                     cin>>x;
                     break;
                 }
