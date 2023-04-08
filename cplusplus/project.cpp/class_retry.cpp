@@ -1,4 +1,3 @@
-//정적 멤버
 #include <iostream>
 using namespace std;
 class Operator{
