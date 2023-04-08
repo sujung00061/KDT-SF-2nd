@@ -35,30 +35,28 @@ int main(){
                 cout<<"게임을 종료하였습니다.";
                 return 0;
             }
-            else{
-                if(b[0]==b[1] || b[0]==b[2] || b[1]==b[2]){
-                    cout<<"중복된 수입니다."<<endl;
-                }
-                else{
-                    cnt++;
-                    for (int i=0;i<3;i++){
-                        for (int j=0;j<3;j++){ //요소가 같은지 체크
-                            if(a[i]==b[j]){
-                                if(i==j){
-                                    sCnt++;     //strike 카운트
-                                }
-                                else{
-                                bCnt++;
-                                }        // ball 카운트
-                            }
+            if(b[0]==b[1] || b[0]==b[2] || b[1]==b[2]){
+                cout<<"중복된 수입니다."<<endl;
+                continue;
+            }
+            cnt++;
+            for (int i=0;i<3;i++){
+                for (int j=0;j<3;j++){ //요소가 같은지 체크
+                    if(a[i]==b[j]){
+                        if(i==j){
+                            sCnt++;     //strike 카운트
                         }
+                        else{
+                            bCnt++;
+                        }        // ball 카운트
                     }
-                    if(sCnt==3){
-                        cout<<cnt<<"번만에 맞췄습니다!";
-                        return 0;
-                    }
-                    cout<<"Strike : "<<sCnt<<"              Ball: "<<bCnt<<endl;
                 }
             }
+            if(sCnt==3){
+                cout<<cnt<<"번만에 맞췄습니다!";
+                return 0;
+            }
+            cout<<"Strike : "<<sCnt<<"              Ball: "<<bCnt<<endl;
+        
     }
 }
