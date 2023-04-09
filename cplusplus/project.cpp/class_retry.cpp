@@ -89,13 +89,13 @@ int main(){
             cout<<o->Answer()<<endl;
             answer=o->Answer();
             delete o;
-
         }
         else if(a=='*'){
             Operator *o=new Multiply(x,y);
             cout<<o->Answer()<<endl;
             answer=o->Answer();
             delete o;
+            
         }
         else if(a=='/'){
             Operator *o=new Divide(x,y);
@@ -103,24 +103,25 @@ int main(){
             answer=o->Answer();
             delete o;
         }
+
+        
         cout<<"----------------------------------------------------"<<endl;
         while(1){
             cout<<"연산을 계속 진행하시겠습니까?(Y: 계속, AC: 초기화, EXIT: 종료): ";
             cin>>b;
-            if(b=="Y" || b=="AC" || b=="EXIT"){
-                if(b=="Y"){
-                    x=answer;
-                    break;
-                }
-                if(b=="AC"){
-                    cout<<"숫자를 입력해주세요 : ";
-                    cin>>x;
-                    break;
-                }
-                if(b=="EXIT"){
-                    cout<<"총 시도한 횟수: "<<Operator::getCnt();
-                    return 0;
-                }
+
+            if(b=="Y"){
+                x=answer;
+                break;
+            }
+            else if(b=="AC"){
+                cout<<"숫자를 입력해주세요 : "<<endl;
+                cin>>x;
+                break;
+            }
+            else if(b=="EXIT"){
+                cout<<"총 시도한 횟수: "<<(Operator::getCnt())/2;
+                return 0;
             }
             else{
                 cout<<"잘못된 입력입니다. 다시 입력해주세요."<<endl;
